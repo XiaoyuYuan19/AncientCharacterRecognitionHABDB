@@ -1,0 +1,397 @@
+<!doctype html>
+<!--
+author: Xiaoyu Yuan
+filename: base.html
+Date: 2022-4-11-->
+<html lang="zh-CN">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>{{_('盟书·智藏 | 繁体字检索')}}2</title>
+    <link rel="icon" href="/static/images/handwritten_icon.png" type ="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+      <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body style="background-image:url(/static/images/background3.png);width: 100%;height: 100%;">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">{{_('导航按钮')}}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="cover.html">{{_('盟书·智藏')}}</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">{{_('主页')}}</a></li>
+            <li class="active"><a href="sourch.html">{{_('检索古文字')}}</a></li>
+            <li><a href="predict.html">{{_('古文字图片识别')}}</a></li>
+            <li><a href="online.html">{{_('古文字手写识别')}}</a></li>
+            <li><a href="fqa.html">{{_('常见问题')}}</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                  <select class="dropdown select_language" style="height: 50px; background: #333; color: #fff;border: 0px; " name="language" aria-label="State" id="language_switch">
+                      <option value="" style="color: gray; ">{{_('Language')}}</option>
+                      <option value="中文">{{_("中文")}}</option>
+                      <option value="English">{{_("English")}}</option>
+                  </select>
+              </li>
+          </ul>
+          <script>
+              $("#language_switch").change(function(){
+                  $.ajax({
+                      url: '/set_locale',
+                      type: 'GET',
+                      data:{"language": $(this).val()},
+                      success: function (ret) {
+                          location.reload();
+                      }
+                  })
+              });
+          </script>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <main>
+      <div class="jumbotron" style="background-image:url(/static/images/background0.png);width: 100%;height: 100%;">
+        <div class="container">
+          <h1>{{_('侯马盟书古文字检索')}}</h1>
+          <p>{{_('本页展示了已识别的327类古文字对应的繁体字，点击繁体字可查看古文字字型。')}}</p>
+        </div>
+      </div>
+
+      <div class="container">
+      <!-- Example row of columns -->
+
+          <div style="padding-bottom: 20px" >
+              <button class="bg-success"><a href="s1.html">{{_('单字检索')}}</a></button>
+              <button><a href="sp1.html">{{_('摹本检索')}}</a></button>
+              <button><a href="stp2.html">{{_('拓片检索')}}</a></button>
+          </div>
+
+          <div style="padding-bottom: 20px" >
+              <button><a href="s1.html">{{_('第一页')}}</a></button>
+              <button class="bg-success"><a href="s2.html">{{_('第二页')}}</a></button>
+              <button><a href="s3.html">{{_('第三页')}}</a></button>
+              <button><a href="s4.html">{{_('第四页')}}</a></button>
+              <button><a href="s5.html">{{_('第五页')}}</a></button>
+          </div>
+
+          <div class="col-lg-4">
+              <div>
+                <div class="panel-footer" style="height: 200px; overflow-y:scroll; ">
+                    <div style="border: 10px  #737373; width: 100%; margin: 0 auto;">
+                        <span>
+                            <div id="tbody"><h4>{{_('古文字字型预览')}}</h4></div>
+
+                            <div id="hmms_checked"></div>
+                                <script>
+                                    function show_hmms(label){
+                                        $("#hmms_checked").html("<img height='180px' src='"+"/static/fanti2hmms/"+label+".png"+"'>");
+                                        str = '<h4>古文字字型预览：'+label+'</h4>';
+                                        $("#tbody").html(str);
+                                    }
+                                </script>
+                        </span>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8" >
+            <div style="padding-bottom: 100px" >
+                <div class="panel-footer" style="height: 200px; overflow-y:scroll; ">
+                    <div style="border: 10px  #737373; width: 100%; margin: 0 auto;">
+                        <span>
+                            <div class="row">
+                                <table>
+                                  <tr>
+                                      <th class="text-center">2_01</th>
+                                      <th class="text-center">2_02</th>
+                                      <th class="text-center">2_03</th>
+                                      <th class="text-center">2_04</th>
+                                      <th class="text-center">2_05</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="200" class="text-center"><button onclick="show_hmms('2_01')"><img src="/static/dataset0729/FanTi0719/2_01.png" height="40" ></button></td>
+                                      <td width="200" class="text-center"><button onclick="show_hmms('2_02')"><img src="/static/dataset0729/FanTi0719/2_02.png" height="40" ></button></td>
+                                      <td width="200" class="text-center"><button onclick="show_hmms('2_03')"><img src="/static/dataset0729/FanTi0719/2_03.png" height="40" ></button></td>
+                                      <td width="200" class="text-center"><button onclick="show_hmms('2_04')"><img src="/static/dataset0729/FanTi0719/2_04.png" height="40" ></button></td>
+                                      <td width="200" class="text-center"><button onclick="show_hmms('2_05')"><img src="/static/dataset0729/FanTi0719/2_05.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_06</th>
+                                      <th class="text-center">2_07</th>
+                                      <th class="text-center">2_08</th>
+                                      <th class="text-center">2_09</th>
+                                      <th class="text-center">2_10</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_06')"><img src="/static/dataset0729/FanTi0719/2_06.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_07')"><img src="/static/dataset0729/FanTi0719/2_07.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_08')"><img src="/static/dataset0729/FanTi0719/2_08.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_09')"><img src="/static/dataset0729/FanTi0719/2_09.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_10')"><img src="/static/dataset0729/FanTi0719/2_10.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_11</th>
+                                      <th class="text-center">2_12</th>
+                                      <th class="text-center">2_13</th>
+                                      <th class="text-center">2_14</th>
+                                      <th class="text-center">2_15</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_11')"><img src="/static/dataset0729/FanTi0719/2_11.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_12')"><img src="/static/dataset0729/FanTi0719/2_12.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_13')"><img src="/static/dataset0729/FanTi0719/2_13.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_14')"><img src="/static/dataset0729/FanTi0719/2_14.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_15')"><img src="/static/dataset0729/FanTi0719/2_15.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_16</th>
+                                      <th class="text-center">2_17</th>
+                                      <th class="text-center">2_18</th>
+                                      <th class="text-center">2_19</th>
+                                      <th class="text-center">2_20</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_16')"><img src="/static/dataset0729/FanTi0719/2_16.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_17')"><img src="/static/dataset0729/FanTi0719/2_17.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_18')"><img src="/static/dataset0729/FanTi0719/2_18.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_19')"><img src="/static/dataset0729/FanTi0719/2_19.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_20')"><img src="/static/dataset0729/FanTi0719/2_20.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_21</th>
+                                      <th class="text-center">2_22</th>
+                                      <th class="text-center">2_23</th>
+                                      <th class="text-center">2_24</th>
+                                      <th class="text-center">2_25</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_21')"><img src="/static/dataset0729/FanTi0719/2_21.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_22')"><img src="/static/dataset0729/FanTi0719/2_22.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_23')"><img src="/static/dataset0729/FanTi0719/2_23.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_24')"><img src="/static/dataset0729/FanTi0719/2_24.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_25')"><img src="/static/dataset0729/FanTi0719/2_25.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_26</th>
+                                      <th class="text-center">2_27</th>
+                                      <th class="text-center">2_28</th>
+                                      <th class="text-center">2_29</th>
+                                      <th class="text-center">2_30</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_26')"><img src="/static/dataset0729/FanTi0719/2_26.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_27')"><img src="/static/dataset0729/FanTi0719/2_27.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_28')"><img src="/static/dataset0729/FanTi0719/2_28.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_29')"><img src="/static/dataset0729/FanTi0719/2_29.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_30')"><img src="/static/dataset0729/FanTi0719/2_30.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_31</th>
+                                      <th class="text-center">2_32</th>
+                                      <th class="text-center">2_33</th>
+                                      <th class="text-center">2_34</th>
+                                      <th class="text-center">2_35</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_31')"><img src="/static/dataset0729/FanTi0719/2_31.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_32')"><img src="/static/dataset0729/FanTi0719/2_32.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_33')"><img src="/static/dataset0729/FanTi0719/2_33.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_34')"><img src="/static/dataset0729/FanTi0719/2_34.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_35')"><img src="/static/dataset0729/FanTi0719/2_35.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_36</th>
+                                      <th class="text-center">2_37</th>
+                                      <th class="text-center">2_38</th>
+                                      <th class="text-center">2_39</th>
+                                      <th class="text-center">2_40</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_36')"><img src="/static/dataset0729/FanTi0719/2_36.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_37')"><img src="/static/dataset0729/FanTi0719/2_37.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_38')"><img src="/static/dataset0729/FanTi0719/2_38.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_39')"><img src="/static/dataset0729/FanTi0719/2_39.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_40')"><img src="/static/dataset0729/FanTi0719/2_40.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_41</th>
+                                      <th class="text-center">2_42</th>
+                                      <th class="text-center">2_43</th>
+                                      <th class="text-center">2_44</th>
+                                      <th class="text-center">2_45</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_41')"><img src="/static/dataset0729/FanTi0719/2_41.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_42')"><img src="/static/dataset0729/FanTi0719/2_42.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_43')"><img src="/static/dataset0729/FanTi0719/2_43.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_44')"><img src="/static/dataset0729/FanTi0719/2_44.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_45')"><img src="/static/dataset0729/FanTi0719/2_45.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_46</th>
+                                      <th class="text-center">2_47</th>
+                                      <th class="text-center">2_48</th>
+                                      <th class="text-center">2_49</th>
+                                      <th class="text-center">2_50</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_46')"><img src="/static/dataset0729/FanTi0719/2_46.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_47')"><img src="/static/dataset0729/FanTi0719/2_47.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_48')"><img src="/static/dataset0729/FanTi0719/2_48.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_49')"><img src="/static/dataset0729/FanTi0719/2_49.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_50')"><img src="/static/dataset0729/FanTi0719/2_50.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_51</th>
+                                      <th class="text-center">2_52</th>
+                                      <th class="text-center">2_53</th>
+                                      <th class="text-center">2_54</th>
+                                      <th class="text-center">2_55</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_51')"><img src="/static/dataset0729/FanTi0719/2_51.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_52')"><img src="/static/dataset0729/FanTi0719/2_52.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_53')"><img src="/static/dataset0729/FanTi0719/2_53.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_54')"><img src="/static/dataset0729/FanTi0719/2_54.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_55')"><img src="/static/dataset0729/FanTi0719/2_55.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_56</th>
+                                      <th class="text-center">2_57</th>
+                                      <th class="text-center">2_58</th>
+                                      <th class="text-center">2_59</th>
+                                      <th class="text-center">2_60</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_56')"><img src="/static/dataset0729/FanTi0719/2_56.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_57')"><img src="/static/dataset0729/FanTi0719/2_57.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_58')"><img src="/static/dataset0729/FanTi0719/2_58.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_59')"><img src="/static/dataset0729/FanTi0719/2_59.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_60')"><img src="/static/dataset0729/FanTi0719/2_60.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_61</th>
+                                      <th class="text-center">2_62</th>
+                                      <th class="text-center">2_63</th>
+                                      <th class="text-center">2_64</th>
+                                      <th class="text-center">2_65</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_61')"><img src="/static/dataset0729/FanTi0719/2_61.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_62')"><img src="/static/dataset0729/FanTi0719/2_62.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_63')"><img src="/static/dataset0729/FanTi0719/2_63.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_64')"><img src="/static/dataset0729/FanTi0719/2_64.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_65')"><img src="/static/dataset0729/FanTi0719/2_65.png" height="40" ></button></td>
+                                  </tr>
+                                  <tr height="20"></tr>
+                                  <tr>
+                                      <th class="text-center">2_66</th>
+                                      <th class="text-center">2_67</th>
+                                      <th class="text-center">2_68</th>
+                                      <th class="text-center">2_69</th>
+                                      <th class="text-center">2_70</th>
+                                  </tr>
+                                  <tr>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_66')"><img src="/static/dataset0729/FanTi0719/2_66.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_67')"><img src="/static/dataset0729/FanTi0719/2_67.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_68')"><img src="/static/dataset0729/FanTi0719/2_68.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_69')"><img src="/static/dataset0729/FanTi0719/2_69.png" height="40" ></button></td>
+                                      <td width="100" class="text-center"><button onclick="show_hmms('2_70')"><img src="/static/dataset0729/FanTi0719/2_70.png" height="40" ></button></td>
+                                  </tr>
+                              </table>
+                            </div>
+                        </span>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+
+
+          <hr>
+
+          <footer id="about us" >
+              <div class="row">
+                  <div class="col-md-4">
+                      <a href="cover.html"><img src="/static/images/logo1.png" width="300" height="40"></a>
+                      <p>{{_('邮箱：')}}<a href="mailto:xyuan19@student.oulu.fi">xyuan19@student.oulu.fi</a></p>
+                      <p>{{_('电话：')}}<a href="tel:+15083079618">15083079618</a></p>
+
+                  </div>
+                  <div class="col-md-4">
+                      <h4>{{_('组织')}}</h4>
+                      <p>{{_('学校：')}}<a href="https://www.njit.edu.cn/">{{_('南京工程学院')}}</a></p>
+                      <p>{{_('院系：')}}<a href="https://sie.njit.edu.cn/">{{_('国际教育学院')}}</a></p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h4>{{_('团队')}}</h4>
+                      <p>{{_('指导老师：')}}<a href="https://ce.njit.edu.cn/info/1228/3664.htm">{{_('黄晓华')}}</a></p>
+                      <p>{{_('团队成员：软件工程中外合办专业学生')}}</p>
+                  </div>
+              </div>
+          </footer>
+      </div> <!-- /container -->
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/jquery.min.js"><\/script>')</script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

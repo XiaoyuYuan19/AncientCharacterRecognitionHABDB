@@ -1,0 +1,407 @@
+﻿<!doctype html>
+<!--
+author: Xiaoyu Yuan
+filename: base.html
+Date: 2022-4-11-->
+<html lang="zh-CN">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>{{_('盟书·智藏 | 繁体字检索')}}1</title>
+    <link rel="icon" href="/static/images/handwritten_icon.png" type ="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+      <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://fastly.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://fastly.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+	<style type="text/css">
+		.box {
+            height: 200px;
+            margin-top: 100px;
+            margin-left: 300px;
+            transition: all 0.4s;//设置上浮过渡时间
+        }
+
+        .box:hover {
+            box-shadow: 0 8px 8px 0 grey;
+            transform: translate(0, -10px);
+            transform: scale(3)
+        }
+
+        .box-bd {
+            margin: 20px 0 0 300px;
+            width: 200px;
+        }
+
+	</style>
+
+  </head>
+
+  <body style="background-image:url(/static/images/background3.png);width: 100%;height: 100%;">
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">{{_('导航按钮')}}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="cover.html">{{_('盟书·智藏')}}</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">{{_('主页')}}</a></li>
+            <li class="active"><a href="sourch.html">{{_('检索古文字')}}</a></li>
+            <li><a href="predict.html">{{_('古文字图片识别')}}</a></li>
+            <li><a href="online.html">{{_('古文字手写识别')}}</a></li>
+            <li><a href="fqa.html">{{_('常见问题')}}</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                  <select class="dropdown select_language" style="height: 50px; background: #333; color: #fff;border: 0px; " name="language" aria-label="State" id="language_switch">
+                      <option value="" style="color: gray; ">{{_('Language')}}</option>
+                      <option value="中文">{{_("中文")}}</option>
+                      <option value="English">{{_("English")}}</option>
+                  </select>
+              </li>
+          </ul>
+          <script>
+              $("#language_switch").change(function(){
+                  $.ajax({
+                      url: '/set_locale',
+                      type: 'GET',
+                      data:{"language": $(this).val()},
+                      success: function (ret) {
+                          location.reload();
+                      }
+                  })
+              });
+          </script>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <main>
+      <div class="jumbotron" style="background-image:url(/static/images/background0.png);width: 100%;height: 100%;">
+        <div class="container">
+          <h1>{{_('侯马盟书古文字检索')}}</h1>
+          <p>{{_('本页展示了已识别的327类古文字对应的繁体字，点击繁体字可查看古文字字型。')}}</p>
+        </div>
+      </div>
+
+      <div class="container">
+      <!-- Example row of columns -->
+          <div style="padding-bottom: 20px" >
+              <button><a href="s1.html">{{_('单字检索')}}</a></button>
+              <button><a href="sp1.html">{{_('摹本检索')}}</a></button>
+              <button class="bg-success"><a href="stp.html">{{_('拓片检索')}}</a></button>
+          </div>
+
+
+          <div class="container-fluid panel-footer" style="height: 2000px; overflow-y:scroll;" >
+            <div class="row">
+                <table>
+                    <tr>
+                        <th class="text-center">1_5</th>
+                        <th class="text-center">1_6</th>
+                        <th class="text-center">1_7</th>
+                        <th class="text-center">1_9</th>
+                        <th class="text-center">1_11</th>
+                        <th class="text-center">1_14</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_5/1_5_1.png" height="120" ><img src="static/duizhao/1_5/1_5_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_6/1_6_1.png" height="120" ><img src="static/duizhao/1_6/1_6_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_7/1_7_1.png" height="120" ><img src="static/duizhao/1_7/1_7_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_9/1_9_1.png" height="120" ><img src="static/duizhao/1_9/1_9_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_11/1_11_1.png" height="120" ><img src="static/duizhao/1_11/1_11_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_14/1_14_1.png" height="120" ><img src="static/duizhao/1_14/1_14_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_16</th>
+                        <th class="text-center">1_17</th>
+                        <th class="text-center">1_18</th>
+                        <th class="text-center">1_22</th>
+                        <th class="text-center">1_13</th>
+                        <th class="text-center">1_24</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_5/1_5_1.png" height="120" ><img src="static/duizhao/1_5/1_5_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_6/1_6_1.png" height="120" ><img src="static/duizhao/1_6/1_6_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_7/1_7_1.png" height="120" ><img src="static/duizhao/1_7/1_7_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_9/1_9_1.png" height="120" ><img src="static/duizhao/1_9/1_9_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_11/1_11_1.png" height="120" ><img src="static/duizhao/1_11/1_11_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_14/1_14_1.png" height="120" ><img src="static/duizhao/1_14/1_14_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_28</th>
+                        <th class="text-center">1_30</th>
+                        <th class="text-center">1_31</th>
+                        <th class="text-center">1_33</th>
+                        <th class="text-center">1_35</th>
+                        <th class="text-center">1_36</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_5/1_5_1.png" height="120" ><img src="static/duizhao/1_5/1_5_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_6/1_6_1.png" height="120" ><img src="static/duizhao/1_6/1_6_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_7/1_7_1.png" height="120" ><img src="static/duizhao/1_7/1_7_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_9/1_9_1.png" height="120" ><img src="static/duizhao/1_9/1_9_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_11/1_11_1.png" height="120" ><img src="static/duizhao/1_11/1_11_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_14/1_14_1.png" height="120" ><img src="static/duizhao/1_14/1_14_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_39</th>
+                        <th class="text-center">1_40</th>
+                        <th class="text-center">1_41</th>
+                        <th class="text-center">1_51</th>
+                        <th class="text-center">1_52</th>
+                        <th class="text-center">1_53</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_5/1_5_1.png" height="120" ><img src="static/duizhao/1_5/1_5_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_6/1_6_1.png" height="120" ><img src="static/duizhao/1_6/1_6_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_7/1_7_1.png" height="120" ><img src="static/duizhao/1_7/1_7_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_9/1_9_1.png" height="120" ><img src="static/duizhao/1_9/1_9_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_11/1_11_1.png" height="120" ><img src="static/duizhao/1_11/1_11_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_14/1_14_1.png" height="120" ><img src="static/duizhao/1_14/1_14_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_55</th>
+                        <th class="text-center">1_57</th>
+                        <th class="text-center">1_58</th>
+                        <th class="text-center">1_59</th>
+                        <th class="text-center">1_61</th>
+                        <th class="text-center">1_62</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_5/1_5_1.png" height="120" ><img src="static/duizhao/1_5/1_5_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_6/1_6_1.png" height="120" ><img src="static/duizhao/1_6/1_6_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_7/1_7_1.png" height="120" ><img src="static/duizhao/1_7/1_7_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_9/1_9_1.png" height="120" ><img src="static/duizhao/1_9/1_9_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_11/1_11_1.png" height="120" ><img src="static/duizhao/1_11/1_11_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_14/1_14_1.png" height="120" ><img src="static/duizhao/1_14/1_14_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_65</th>
+                        <th class="text-center">1_66</th>
+                        <th class="text-center">1_67</th>
+                        <th class="text-center">1_71</th>
+                        <th class="text-center">1_72</th>
+                        <th class="text-center">1_78</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_65/1_65_1.png" height="120" ><img src="static/duizhao/1_65/1_65_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_66/1_66_1.png" height="120" ><img src="static/duizhao/1_66/1_66_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_67/1_67_1.png" height="120" ><img src="static/duizhao/1_67/1_67_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_71/1_71_1.png" height="120" ><img src="static/duizhao/1_71/1_71_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_72/1_72_1.png" height="120" ><img src="static/duizhao/1_72/1_72_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_78/1_78_1.png" height="120" ><img src="static/duizhao/1_78/1_78_2.png" height="120" ></button></td>
+                    </tr>
+
+
+
+
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_81</th>
+                        <th class="text-center">1_82</th>
+                        <th class="text-center">1_84</th>
+                        <th class="text-center">1_86</th>
+                        <th class="text-center">1_87</th>
+                        <th class="text-center">1_93</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_81/1_81_1.png" height="120" ><img src="static/duizhao/1_81/1_81_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_82/1_82_1.png" height="120" ><img src="static/duizhao/1_82/1_82_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_84/1_84_1.png" height="120" ><img src="static/duizhao/1_84/1_84_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_86/1_86_1.png" height="120" ><img src="static/duizhao/1_86/1_86_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_87/1_87_1.png" height="120" ><img src="static/duizhao/1_87/1_87_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_93/1_93_1.png" height="120" ><img src="static/duizhao/1_93/1_93_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">1_102</th>
+                        <th class="text-center">1_103</th>
+                        <th class="text-center">1_105</th>
+                        <th class="text-center">3_2</th>
+                        <th class="text-center">3_6</th>
+                        <th class="text-center">3_8</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_102/1_102_1.png" height="120" ><img src="static/duizhao/1_102/1_102_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_103/1_103_1.png" height="120" ><img src="static/duizhao/1_103/1_103_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/1_105/1_105_1.png" height="120" ><img src="static/duizhao/1_105/1_105_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_2/3_2_1.png" height="120" ><img src="static/duizhao/3_2/3_2_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_6/3_6_1.png" height="120" ><img src="static/duizhao/3_6/3_6_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_8/3_8_1.png" height="120" ><img src="static/duizhao/3_8/3_8_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">3_9</th>
+                        <th class="text-center">3_10</th>
+                        <th class="text-center">3_12</th>
+                        <th class="text-center">3_13</th>
+                        <th class="text-center">3_17</th>
+                        <th class="text-center">3_19</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_9/3_9_1.png" height="120" ><img src="static/duizhao/3_9/3_9_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_10/3_10_1.png" height="120" ><img src="static/duizhao/3_10/3_10_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_12/3_12_1.png" height="120" ><img src="static/duizhao/3_12/3_12_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_13/3_13_1.png" height="120" ><img src="static/duizhao/3_13/3_13_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_17/3_17_1.png" height="120" ><img src="static/duizhao/3_17/3_17_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_19/3_19_1.png" height="120" ><img src="static/duizhao/3_19/3_19_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">3_20</th>
+                        <th class="text-center">2_21</th>
+                        <th class="text-center">3_24</th>
+                        <th class="text-center">3_25</th>
+                        <th class="text-center">3_26</th>
+                        <th class="text-center">16_1</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_20/3_20_1.png" height="120" ><img src="static/duizhao/3_20/3_20_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/2_21/2_21_1.png" height="120" ><img src="static/duizhao/2_21/2_21_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_24/3_24_1.png" height="120" ><img src="static/duizhao/3_24/3_24_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_25/3_25_1.png" height="120" ><img src="static/duizhao/3_25/3_25_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/3_26/3_26_1.png" height="120" ><img src="static/duizhao/3_26/3_26_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_1/16_1_1.png" height="120" ><img src="static/duizhao/16_1/16_1_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">16_2</th>
+                        <th class="text-center">16_3</th>
+                        <th class="text-center">16_4</th>
+                        <th class="text-center">16_5</th>
+                        <th class="text-center">16_7</th>
+                        <th class="text-center">16_10</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_2/16_2_1.png" height="120" ><img src="static/duizhao/16_2/16_2_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_3/16_3_1.png" height="120" ><img src="static/duizhao/16_3/16_3_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_4/16_4_1.png" height="120" ><img src="static/duizhao/16_4/16_4_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_5/16_5_1.png" height="120" ><img src="static/duizhao/16_5/16_5_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_7/16_7_1.png" height="120" ><img src="static/duizhao/16_7/16_7_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_10/16_10_1.png" height="120" ><img src="static/duizhao/16_10/16_10_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">16_12</th>
+                        <th class="text-center">16_13</th>
+                        <th class="text-center">16_14</th>
+                        <th class="text-center">16_20</th>
+                        <th class="text-center">16_21</th>
+                        <th class="text-center">16_23</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_12/16_12_1.png" height="120" ><img src="static/duizhao/16_12/16_12_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_13/16_13_1.png" height="120" ><img src="static/duizhao/16_13/16_13_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_14/16_14_1.png" height="120" ><img src="static/duizhao/16_14/16_14_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_20/16_20_1.png" height="120" ><img src="static/duizhao/16_20/16_20_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_21/16_21_1.png" height="120" ><img src="static/duizhao/16_21/16_21_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_23/16_23_1.png" height="120" ><img src="static/duizhao/16_23/16_23_2.png" height="120" ></button></td>
+                    </tr>
+
+                    <tr height="40"></tr>
+                    <tr>
+                        <th class="text-center">16_25</th>
+                        <th class="text-center">16_34</th>
+                        <th class="text-center">16_35</th>
+                        <th class="text-center">16_36</th>
+                        <th class="text-center">16_37</th>
+                        <th class="text-center">16_38</th>
+                    </tr>
+                    <tr>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_25/16_25_1.png" height="120" ><img src="static/duizhao/16_25/16_25_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_34/16_34_1.png" height="120" ><img src="static/duizhao/16_34/16_34_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_35/16_35_1.png" height="120" ><img src="static/duizhao/16_35/16_35_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_36/16_36_1.png" height="120" ><img src="static/duizhao/16_36/16_36_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_37/16_37_1.png" height="120" ><img src="static/duizhao/16_37/16_37_2.png" height="120" ></button></td>
+                        <td width="200" class="text-center box"><img src="static/duizhao/16_38/16_38_1.png" height="120" ><img src="static/duizhao/16_38/16_38_2.png" height="120" ></button></td>
+                    </tr>
+
+                </table>
+
+            </div>
+          </div>
+
+          <hr>
+
+          <footer id="about us" >
+              <div class="row">
+                  <div class="col-md-4">
+                      <a href="cover.html"><img src="/static/images/logo1.png" width="300" height="40"></a>
+                      <p>{{_('邮箱：')}}<a href="mailto:xyuan19@student.oulu.fi">xyuan19@student.oulu.fi</a></p>
+                      <p>{{_('电话：')}}<a href="tel:+15083079618">15083079618</a></p>
+
+                  </div>
+                  <div class="col-md-4">
+                      <h4>{{_('组织')}}</h4>
+                      <p>{{_('学校：')}}<a href="https://www.njit.edu.cn/">{{_('南京工程学院')}}</a></p>
+                      <p>{{_('院系：')}}<a href="https://sie.njit.edu.cn/">{{_('国际教育学院')}}</a></p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h4>{{_('团队')}}</h4>
+                      <p>{{_('指导老师：')}}<a href="https://ce.njit.edu.cn/info/1228/3664.htm">{{_('黄晓华')}}</a></p>
+                      <p>{{_('团队成员：软件工程中外合办专业学生')}}</p>
+                  </div>
+              </div>
+          </footer>
+      </div> <!-- /container -->
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/jquery.min.js"><\/script>')</script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,671 @@
+# English translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-05-24 08:38+0800\n"
+"PO-Revision-Date: 2023-02-18 21:32+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: templates/cover.html:58 templates/detection.html:49
+#: templates/detectionOk.html:49 templates/fqa.html:49 templates/index.html:49
+#: templates/online.html:51 templates/online2photo.html:51
+#: templates/photo2label.html:49 templates/predict.html:49 templates/s1.html:50
+#: templates/s2.html:50 templates/s3.html:50 templates/s4.html:50
+#: templates/s5.html:50 templates/sp1.html:70 templates/sp2.html:70
+#: templates/sp3.html:70 templates/sp4.html:70 templates/sp5.html:70
+#: templates/sp6.html:70 templates/stp.html:70
+msgid "导航按钮"
+msgstr "Navigation buttons"
+
+#: templates/cover.html:63 templates/detection.html:54
+#: templates/detectionOk.html:54 templates/fqa.html:54 templates/index.html:54
+#: templates/online.html:56 templates/online2photo.html:56
+#: templates/photo2label.html:54 templates/predict.html:54 templates/s1.html:55
+#: templates/s2.html:55 templates/s3.html:55 templates/s4.html:55
+#: templates/s5.html:55 templates/sp1.html:75 templates/sp2.html:75
+#: templates/sp3.html:75 templates/sp4.html:75 templates/sp5.html:75
+#: templates/sp6.html:75 templates/stp.html:75
+msgid "盟书·智藏"
+msgstr "Meet with HMMS"
+
+#: templates/cover.html:67 templates/detection.html:58
+#: templates/detectionOk.html:58 templates/fqa.html:58 templates/index.html:58
+#: templates/online.html:60 templates/online2photo.html:60
+#: templates/photo2label.html:58 templates/predict.html:58 templates/s1.html:59
+#: templates/s2.html:59 templates/s3.html:59 templates/s4.html:59
+#: templates/s5.html:59 templates/sp1.html:79 templates/sp2.html:79
+#: templates/sp3.html:79 templates/sp4.html:79 templates/sp5.html:79
+#: templates/sp6.html:79 templates/stp.html:79
+msgid "主页"
+msgstr "Home"
+
+#: templates/cover.html:68 templates/detection.html:59
+#: templates/detectionOk.html:59 templates/fqa.html:59 templates/index.html:59
+#: templates/online.html:61 templates/online2photo.html:61
+#: templates/photo2label.html:59 templates/predict.html:59 templates/s1.html:60
+#: templates/s2.html:60 templates/s3.html:60 templates/s4.html:60
+#: templates/s5.html:60 templates/sp1.html:80 templates/sp2.html:80
+#: templates/sp3.html:80 templates/sp4.html:80 templates/sp5.html:80
+#: templates/sp6.html:80 templates/stp.html:80
+msgid "检索古文字"
+msgstr "Searching for ancient scripts"
+
+#: templates/cover.html:69 templates/detection.html:60
+#: templates/detectionOk.html:60 templates/fqa.html:60 templates/index.html:60
+#: templates/online.html:62 templates/online2photo.html:62
+#: templates/photo2label.html:60 templates/predict.html:60 templates/s1.html:61
+#: templates/s2.html:61 templates/s3.html:61 templates/s4.html:61
+#: templates/s5.html:61 templates/sp1.html:81 templates/sp2.html:81
+#: templates/sp3.html:81 templates/sp4.html:81 templates/sp5.html:81
+#: templates/sp6.html:81 templates/stp.html:81
+msgid "古文字图片识别"
+msgstr "Image Recognition"
+
+#: templates/cover.html:70 templates/detection.html:61
+#: templates/detectionOk.html:61 templates/fqa.html:61 templates/index.html:61
+#: templates/online.html:63 templates/online2photo.html:63
+#: templates/photo2label.html:61 templates/predict.html:61 templates/s1.html:62
+#: templates/s2.html:62 templates/s3.html:62 templates/s4.html:62
+#: templates/s5.html:62 templates/sp1.html:82 templates/sp2.html:82
+#: templates/sp3.html:82 templates/sp4.html:82 templates/sp5.html:82
+#: templates/sp6.html:82 templates/stp.html:82
+msgid "古文字手写识别"
+msgstr "Handwriting Recognition"
+
+#: templates/cover.html:71 templates/detection.html:62
+#: templates/detectionOk.html:62 templates/fqa.html:62 templates/fqa.html:92
+#: templates/index.html:62 templates/online.html:64
+#: templates/online2photo.html:64 templates/photo2label.html:62
+#: templates/predict.html:62 templates/s1.html:63 templates/s2.html:63
+#: templates/s3.html:63 templates/s4.html:63 templates/s5.html:63
+#: templates/sp1.html:83 templates/sp2.html:83 templates/sp3.html:83
+#: templates/sp4.html:83 templates/sp5.html:83 templates/sp6.html:83
+#: templates/stp.html:83
+msgid "常见问题"
+msgstr "Frequently Asked Questions"
+
+#: templates/cover.html:76 templates/detection.html:67
+#: templates/detectionOk.html:67 templates/fqa.html:67 templates/index.html:67
+#: templates/online.html:69 templates/online2photo.html:69
+#: templates/photo2label.html:67 templates/predict.html:67 templates/s1.html:68
+#: templates/s2.html:68 templates/s3.html:68 templates/s4.html:68
+#: templates/s5.html:68 templates/sp1.html:88 templates/sp2.html:88
+#: templates/sp3.html:88 templates/sp4.html:88 templates/sp5.html:88
+#: templates/sp6.html:88 templates/stp.html:88
+msgid "Language"
+msgstr "语言"
+
+#: templates/cover.html:77 templates/detection.html:68
+#: templates/detectionOk.html:68 templates/fqa.html:68 templates/index.html:68
+#: templates/online.html:70 templates/online2photo.html:70
+#: templates/photo2label.html:68 templates/predict.html:68 templates/s1.html:69
+#: templates/s2.html:69 templates/s3.html:69 templates/s4.html:69
+#: templates/s5.html:69 templates/sp1.html:89 templates/sp2.html:89
+#: templates/sp3.html:89 templates/sp4.html:89 templates/sp5.html:89
+#: templates/sp6.html:89 templates/stp.html:89
+msgid "中文"
+msgstr "中文"
+
+#: templates/cover.html:78 templates/detection.html:69
+#: templates/detectionOk.html:69 templates/fqa.html:69 templates/index.html:69
+#: templates/online.html:71 templates/online2photo.html:71
+#: templates/photo2label.html:69 templates/predict.html:69 templates/s1.html:70
+#: templates/s2.html:70 templates/s3.html:70 templates/s4.html:70
+#: templates/s5.html:70 templates/sp1.html:90 templates/sp2.html:90
+#: templates/sp3.html:90 templates/sp4.html:90 templates/sp5.html:90
+#: templates/sp6.html:90 templates/stp.html:90
+msgid "English"
+msgstr "英文"
+
+#: templates/cover.html:103 templates/cover.html:111
+msgid "侯马盟书智能识别平台"
+msgstr "Houma alliance book intelligent identification platform"
+
+#: templates/cover.html:104
+msgid "基于深层网络的侯马盟书识别平台"
+msgstr "A deep network-based recognition platform for Houma Alliance Book"
+
+#: templates/cover.html:106
+msgid "进入"
+msgstr "Enter"
+
+#: templates/detection.html:92 templates/detectionOk.html:92
+#: templates/photo2label.html:92 templates/predict.html:92
+msgid "图片识别"
+msgstr "Image Recognition"
+
+#: templates/detection.html:93 templates/photo2label.html:93
+#: templates/predict.html:93
+msgid "在本页上传古文字图片，可查看AI模型得到的识别结果。（目前只支持单字识别）"
+msgstr ""
+"Upload a picture of ancient characters on this page to see the "
+"recognition results obtained by the AI model. (Only single character "
+"recognition is currently supported)"
+
+#: templates/detection.html:95 templates/detectionOk.html:95
+#: templates/predict.html:95
+#, fuzzy
+msgid "单字识别"
+msgstr "Ancient script recognition"
+
+#: templates/detection.html:96 templates/detectionOk.html:96
+#: templates/predict.html:96
+msgid "整句识别"
+msgstr "Detection of Ancient HMMS page"
+
+#: templates/detection.html:109 templates/detectionOk.html:109
+#: templates/photo2label.html:117 templates/predict.html:116
+msgid "上传图片"
+msgstr "Upload images"
+
+#: templates/detection.html:118 templates/detectionOk.html:117
+#: templates/photo2label.html:126
+msgid "识别中，请等待..."
+msgstr "Identifying, please wait..."
+
+#: templates/detection.html:133 templates/detectionOk.html:133
+#: templates/photo2label.html:141 templates/predict.html:139
+msgid "图片预览"
+msgstr "Image Preview"
+
+#: templates/detection.html:142 templates/detectionOk.html:142
+msgid "检测结果"
+msgstr "Test results"
+
+#: templates/detection.html:174 templates/detectionOk.html:174
+#: templates/fqa.html:142 templates/index.html:183 templates/online.html:128
+#: templates/online2photo.html:137 templates/photo2label.html:209
+#: templates/predict.html:187 templates/s1.html:303 templates/s2.html:368
+#: templates/s3.html:392 templates/s4.html:374 templates/s5.html:333
+#: templates/sp1.html:296 templates/sp2.html:223 templates/sp3.html:324
+#: templates/sp4.html:162 templates/sp5.html:164 templates/sp6.html:162
+#: templates/stp.html:378
+msgid "邮箱："
+msgstr "Mailbox："
+
+#: templates/detection.html:175 templates/detectionOk.html:175
+#: templates/fqa.html:143 templates/index.html:184 templates/online.html:129
+#: templates/online2photo.html:138 templates/photo2label.html:210
+#: templates/predict.html:188 templates/s1.html:304 templates/s2.html:369
+#: templates/s3.html:393 templates/s4.html:375 templates/s5.html:334
+#: templates/sp1.html:297 templates/sp2.html:224 templates/sp3.html:325
+#: templates/sp4.html:163 templates/sp5.html:165 templates/sp6.html:163
+#: templates/stp.html:379
+msgid "电话："
+msgstr "Phone："
+
+#: templates/detection.html:179 templates/detectionOk.html:179
+#: templates/fqa.html:147 templates/index.html:188 templates/online.html:133
+#: templates/online2photo.html:142 templates/photo2label.html:214
+#: templates/predict.html:192 templates/s1.html:308 templates/s2.html:373
+#: templates/s3.html:397 templates/s4.html:379 templates/s5.html:338
+#: templates/sp1.html:301 templates/sp2.html:228 templates/sp3.html:329
+#: templates/sp4.html:167 templates/sp5.html:169 templates/sp6.html:167
+#: templates/stp.html:383
+msgid "组织"
+msgstr "Organization"
+
+#: templates/detection.html:180 templates/detectionOk.html:180
+#: templates/fqa.html:148 templates/index.html:189 templates/online.html:134
+#: templates/online2photo.html:143 templates/photo2label.html:215
+#: templates/predict.html:193 templates/s1.html:309 templates/s2.html:374
+#: templates/s3.html:398 templates/s4.html:380 templates/s5.html:339
+#: templates/sp1.html:302 templates/sp2.html:229 templates/sp3.html:330
+#: templates/sp4.html:168 templates/sp5.html:170 templates/sp6.html:168
+#: templates/stp.html:384
+msgid "学校："
+msgstr "School："
+
+#: templates/detection.html:180 templates/detectionOk.html:180
+#: templates/index.html:189 templates/online.html:134
+#: templates/online2photo.html:143 templates/photo2label.html:215
+#: templates/predict.html:193 templates/s1.html:309 templates/s2.html:374
+#: templates/s3.html:398 templates/s4.html:380 templates/s5.html:339
+#: templates/sp1.html:302 templates/sp2.html:229 templates/sp3.html:330
+#: templates/sp4.html:168 templates/sp5.html:170 templates/sp6.html:168
+#: templates/stp.html:384
+msgid "南京工程学院"
+msgstr "Institute of Nanjing Engineering"
+
+#: templates/detection.html:181 templates/detectionOk.html:181
+#: templates/fqa.html:149 templates/index.html:190 templates/online.html:135
+#: templates/online2photo.html:144 templates/photo2label.html:216
+#: templates/predict.html:194 templates/s1.html:310 templates/s2.html:375
+#: templates/s3.html:399 templates/s4.html:381 templates/s5.html:340
+#: templates/sp1.html:303 templates/sp2.html:230 templates/sp3.html:331
+#: templates/sp4.html:169 templates/sp5.html:171 templates/sp6.html:169
+#: templates/stp.html:385
+msgid "院系："
+msgstr "Faculty："
+
+#: templates/detection.html:181 templates/detectionOk.html:181
+#: templates/fqa.html:149 templates/index.html:190 templates/online.html:135
+#: templates/online2photo.html:144 templates/photo2label.html:216
+#: templates/predict.html:194 templates/s1.html:310 templates/s2.html:375
+#: templates/s3.html:399 templates/s4.html:381 templates/s5.html:340
+#: templates/sp1.html:303 templates/sp2.html:230 templates/sp3.html:331
+#: templates/sp4.html:169 templates/sp5.html:171 templates/sp6.html:169
+#: templates/stp.html:385
+msgid "国际教育学院"
+msgstr "Institute of International Education"
+
+#: templates/detectionOk.html:93
+#, fuzzy
+msgid "在本页上传古文字图片，可查看AI模型得到的识别结果。"
+msgstr ""
+"Upload images of ancient written jade pieces on this page to see the "
+"detection results obtained by the AI model."
+
+#: templates/fqa.html:93
+msgid "本页包含了和平台相关的常见问题，如不能满足您的需要，欢迎在页面下方联系我们进行反馈。"
+msgstr ""
+"This page contains frequently asked questions related to the platform, if"
+" it does not meet your needs, please feel free to contact us at the "
+"bottom of the page for feedback."
+
+#: templates/fqa.html:101
+msgid "1.如何使用文本识别？"
+msgstr "1.How to use text recognition？"
+
+#: templates/fqa.html:102
+msgid "在手写框中写入古文字，平台会自动给出翻译结果和词典结果呈现给用户。"
+msgstr ""
+"Write the ancient text in the handwriting box, and the platform will "
+"automatically give the translation result and dictionary result to "
+"present to the user."
+
+#: templates/fqa.html:105
+msgid "2.如何使用图片识别？"
+msgstr "2.How to use image recognition？"
+
+#: templates/fqa.html:106
+msgid "当上传符合平台规范的图片时，平台会自动给出翻译结果和词典结果呈现给用户。"
+msgstr ""
+"When uploading images that meet the platform's specifications, the "
+"platform will automatically give translation results and dictionary "
+"results to present to the user."
+
+#: templates/fqa.html:114
+msgid "3.为何图片识别有时结果不准确?"
+msgstr "3.Why image recognition sometimes has inaccurate results?"
+
+#: templates/fqa.html:115
+msgid "图像识别本身是具有有很高技术难度的领域，对拍摄的图片有一定要求，光线太暗、背景过于杂乱、角度颠倒或垂直、用户圈选部分不全，都会在一定程度上干扰机器对于图片内容的识别和判断，导致结果不准确。未来我们还将不断优化技术、优化产品，为用户提供更加优化的交互体验。"
+msgstr ""
+"Image recognition itself is a field with high technical difficulty and "
+"has certain requirements on the photographed pictures. Too dark a light, "
+"too cluttered background, upside down or vertical angle, or incomplete "
+"circle selection by the user will all interfere with the machine's "
+"ability to understand the contents of the pictures to a certain "
+"extent.recognition and judgment, resulting in inaccurate results. In the "
+"future, we will continue to optimize our technology and products to "
+"provide users with a more optimized interaction experience."
+
+#: templates/fqa.html:118
+msgid "4.为何手写识别结果有时不准确？"
+msgstr "4.Why handwriting recognition results are sometimes inaccurate？"
+
+#: templates/fqa.html:119
+msgid "确保您的汉字笔迹清晰、无涂改，稍大一点的字会更好识别，并确保屏幕的清洁。"
+msgstr ""
+"Make sure your Chinese handwriting is clear and free of scribbles, "
+"slightly larger characters will be better recognized, and make sure the "
+"screen is clean."
+
+#: templates/fqa.html:127
+msgid "5.图片上传失败？"
+msgstr "5.Image upload failed？"
+
+#: templates/fqa.html:128
+msgid "确保已经您已打开获取相机权限且相机功能可以正常使用；检查您的网络连接，确保网络通畅，多次上传仍失败请留言，我们会全力解决您的问题！"
+msgstr ""
+"Make sure that you have opened the access to the camera and the camera "
+"function can be used normally; check your network connection to ensure "
+"that the network is smooth, multiple uploads still fail, please leave a "
+"message, we will do our best to solve your problem!"
+
+#: templates/fqa.html:131
+msgid "6.找不到您想要的文字？"
+msgstr "6.Can't find the text you want？"
+
+#: templates/fqa.html:132
+msgid "每个文字都会有编号，尝试输入文字的编号可以找到您需要的文字。"
+msgstr ""
+"Each text will be numbered, try to enter the number of the text to find "
+"the text you need."
+
+#: templates/fqa.html:148
+msgid "中国南京工程学院、芬兰奥卢大学"
+msgstr "Institute of Nanjing University, China; University of Oulu, Finland"
+
+#: templates/fqa.html:153 templates/index.html:194 templates/online.html:139
+#: templates/photo2label.html:220 templates/predict.html:198
+#: templates/s1.html:314 templates/s2.html:379 templates/s3.html:403
+#: templates/s4.html:385 templates/s5.html:344 templates/sp1.html:307
+#: templates/sp2.html:234 templates/sp3.html:335 templates/sp4.html:173
+#: templates/sp5.html:175 templates/sp6.html:173 templates/stp.html:389
+msgid "团队"
+msgstr "Team"
+
+#: templates/fqa.html:154 templates/online.html:140
+#: templates/photo2label.html:221 templates/predict.html:199
+#: templates/s1.html:315 templates/s2.html:380 templates/s3.html:404
+#: templates/s4.html:386 templates/s5.html:345 templates/sp1.html:308
+#: templates/sp2.html:235 templates/sp3.html:336 templates/sp4.html:174
+#: templates/sp5.html:176 templates/sp6.html:174 templates/stp.html:390
+msgid "指导老师："
+msgstr "Instructor："
+
+#: templates/fqa.html:154
+msgid "黄晓华老师"
+msgstr "Xiaohua Huang"
+
+#: templates/fqa.html:155 templates/index.html:196 templates/online.html:141
+#: templates/photo2label.html:222 templates/predict.html:200
+#: templates/s1.html:316 templates/s2.html:381 templates/s3.html:405
+#: templates/s4.html:387 templates/s5.html:346 templates/sp1.html:309
+#: templates/sp2.html:236 templates/sp3.html:337 templates/sp4.html:175
+#: templates/sp5.html:177 templates/sp6.html:175 templates/stp.html:391
+msgid "团队成员：软件工程中外合办专业学生"
+msgstr "Team members: Software Engineering Sino-foreign joint major students"
+
+#: templates/index.html:15
+#, fuzzy
+msgid "盟书·智藏 | 主页"
+msgstr "Meet with HMMS | Home"
+
+#: templates/index.html:105
+msgid "检索古文字&raquo;"
+msgstr "Searching for ancient scripts&raquo;"
+
+#: templates/index.html:113
+msgid "古文字识别&raquo;"
+msgstr "Ancient script recognition&raquo;"
+
+#: templates/index.html:136
+msgid "侯马盟书"
+msgstr "Houma Alliance Book"
+
+#: templates/index.html:136
+msgid "春秋之末，战国之初"
+msgstr "The end of Spring and Autumn, the beginning of Warring States"
+
+#: templates/index.html:137
+msgid "侯马盟书，春秋晚期晋定公十五年到二十三年(公元前497年-前489年）晋国世卿赵鞅同卿大夫间举行盟誓的约信文书。1965年山西省文物工作委员会在发掘山西侯马晋国遗址时发现，同年11月至次年5月发掘。这项前所未有的发现不仅推动了中国文字的发展，也大量地填补了文字资料的空白。侯马盟书同时也使人们对春秋到战国某段历史时期的盟誓方法有了更全深入、全面的了解。"
+msgstr ""
+"The Houma Alliance book (aka HAB) is a letter of covenant between Zhao "
+"Yang, the kingdom of Jin, and the ministerial officials in the late "
+"Spring and Autumn Period (497-489 B.C.).Discovered in 1965 by the Shanxi "
+"Provincial \\Cultural Relics Working Committee during excavations at the "
+"Jin State site in Houma, Shanxi, and excavated from November of the same "
+"year to May of the following year. This unprecedented discovery not only "
+"promoted the development of Chinese writing, but also filled in the gaps "
+"of written materials in a large number of ways."
+
+#: templates/index.html:148
+msgid "侯马盟书数据集"
+msgstr "HAB Data Set"
+
+#: templates/index.html:148
+msgid "从玉石片，到宣纸，再到二进制数据"
+msgstr "From jade tablets, to rice paper, to binary data"
+
+#: templates/index.html:149
+msgid "本识别平台收集并整理《侯马盟书》考古报告中已识别的327个单字的小型数据集，每个单字都有多个异体字型，共整理了1665张考古学专家临摹的古文字样本。"
+msgstr ""
+"This identification platform collects and organizes a small dataset of "
+"327 identified monograms from the archaeological report of \"Houma "
+"Mianshu\", each with multiple variants, and a total of 1,665 samples of "
+"ancient characters copied by archaeologists."
+
+#: templates/index.html:150
+msgid "检索侯马盟书古文字"
+msgstr "Searching the ancient text of the Houma Alliance Book of League"
+
+#: templates/index.html:162
+msgid "基于深层网络的识别模型"
+msgstr "Deep network-based recognition model"
+
+#: templates/index.html:162
+msgid "学科交叉"
+msgstr "Interdisciplinary"
+
+#: templates/index.html:163
+msgid "平台使用卷积神经网络模型进行识别实验，寻找到最合适的卷积神经网络结构和最佳准确率。再根据VGG模型对识别优化，使用深度残差网络对侯马盟书特征的提取，ResNet解决侯马盟书字型多而像的问题，通过内容的注意力机制解决预测问题，提升模型的准确率。"
+msgstr ""
+"The platform uses convolutional neural network models for recognition "
+"experiments to find the most suitable convolutional neural network "
+"structure and the best accuracy rate. Then, according to the VGG model "
+"for recognition optimization, the extraction of Houma alphabet features "
+"using deep residual network, ResNet to solve the problem of Houma "
+"alphabet characters with many and like, and the prediction problem "
+"through the attention mechanism of content to improve the accuracy of the"
+" model."
+
+#: templates/index.html:164
+msgid "古文字识别"
+msgstr "Ancient character recognition"
+
+#: templates/index.html:195
+msgid "指导老师"
+msgstr "Instructor"
+
+#: templates/index.html:195 templates/online.html:140
+#: templates/photo2label.html:221 templates/predict.html:199
+#: templates/s1.html:315 templates/s2.html:380 templates/s3.html:404
+#: templates/s4.html:386 templates/s5.html:345 templates/sp1.html:308
+#: templates/sp2.html:235 templates/sp3.html:336 templates/sp4.html:174
+#: templates/sp5.html:176 templates/sp6.html:174 templates/stp.html:390
+msgid "黄晓华"
+msgstr "Xiaohua Huang "
+
+#: templates/online.html:94 templates/online2photo.html:82
+msgid "手写识别"
+msgstr "Handwriting recognition"
+
+#: templates/online.html:95 templates/online2photo.html:83
+msgid "本页可以在手写区域手写，右侧会根据笔画实时显示识别结果。"
+msgstr ""
+"This page can be handwritten in the handwriting area, the right side will"
+" show real-time recognition results according to the strokes."
+
+#: templates/online.html:104 templates/online2photo.html:92
+msgid "清除"
+msgstr "Clear"
+
+#: templates/online.html:113 templates/online2photo.html:101
+msgid "手写预览:"
+msgstr "Handwriting preview"
+
+#: templates/online.html:117 templates/online2photo.html:105
+#, fuzzy
+msgid "识别结果："
+msgstr "Identification results"
+
+#: templates/photo2label.html:15
+#, fuzzy
+msgid "盟书·智藏 | 单字识别"
+msgstr "Meet with HMMS | Single Character Recognition"
+
+#: templates/photo2label.html:95
+msgid "单字识别 &raquo;"
+msgstr "Single word recognition &raquo;"
+
+#: templates/photo2label.html:96
+msgid "整句识别 &raquo;"
+msgstr "Whole sentence recognition &raquo;"
+
+#: templates/photo2label.html:107 templates/predict.html:106
+msgid "正确测试用例1"
+msgstr "Test Case 1, accurate"
+
+#: templates/photo2label.html:108 templates/predict.html:107
+msgid "错误测试用例1"
+msgstr "Test Case 1, Error"
+
+#: templates/photo2label.html:109 templates/predict.html:108
+msgid "错误测试用例2"
+msgstr "Test Case 2, Error"
+
+#: templates/photo2label.html:151 templates/predict.html:148
+msgid "识别结果"
+msgstr "Identification results"
+
+#: templates/predict.html:15
+#, fuzzy
+msgid "盟书·智藏 | 识别"
+msgstr "Meet with HMMS | recognition"
+
+#: templates/s1.html:15 templates/s2.html:15 templates/s3.html:15
+#: templates/s4.html:15 templates/s5.html:15 templates/sp1.html:15
+#: templates/sp2.html:15 templates/sp3.html:15 templates/sp4.html:15
+#: templates/sp5.html:15 templates/sp6.html:15 templates/stp.html:15
+#, fuzzy
+msgid "盟书·智藏 | 繁体字检索"
+msgstr "Meet with HMMS | Traditional Chinese Character Search"
+
+#: templates/s1.html:93 templates/s2.html:93 templates/s3.html:93
+#: templates/s4.html:93 templates/s5.html:93 templates/sp1.html:113
+#: templates/sp2.html:113 templates/sp3.html:113 templates/sp4.html:113
+#: templates/sp5.html:113 templates/sp6.html:113 templates/stp.html:113
+msgid "侯马盟书古文字检索"
+msgstr "Searching the Ancient Writings of the Houma Alliance Book of League"
+
+#: templates/s1.html:94 templates/s2.html:94 templates/s3.html:94
+#: templates/s4.html:94 templates/s5.html:94 templates/sp1.html:114
+#: templates/sp2.html:114 templates/sp3.html:114 templates/sp4.html:114
+#: templates/sp5.html:114 templates/sp6.html:114 templates/stp.html:114
+msgid "本页展示了已识别的327类古文字对应的繁体字，点击繁体字可查看古文字字型。"
+msgstr ""
+"This page shows the recognized 327 types of ancient characters "
+"corresponding to traditional Chinese characters, click on the traditional"
+" characters to view the ancient character font."
+
+#: templates/s1.html:101 templates/s2.html:102 templates/s3.html:102
+#: templates/s4.html:102 templates/s5.html:102 templates/sp1.html:121
+#: templates/sp2.html:121 templates/sp3.html:121 templates/sp4.html:124
+#: templates/sp5.html:124 templates/sp6.html:121 templates/stp.html:121
+msgid "单字检索"
+msgstr "Single-character Retrieval"
+
+#: templates/s1.html:102 templates/s2.html:103 templates/s3.html:103
+#: templates/s4.html:103 templates/s5.html:103 templates/sp1.html:122
+#: templates/sp2.html:122 templates/sp3.html:122 templates/sp4.html:125
+#: templates/sp5.html:125 templates/sp6.html:122 templates/stp.html:122
+msgid "摹本检索"
+msgstr "Imitation Retrieval"
+
+#: templates/s1.html:103 templates/s2.html:104 templates/s3.html:104
+#: templates/s4.html:104 templates/s5.html:104 templates/sp1.html:123
+#: templates/sp2.html:123 templates/sp3.html:123 templates/sp4.html:126
+#: templates/sp5.html:126 templates/sp6.html:123 templates/stp.html:123
+msgid "拓片检索"
+msgstr "Rubbing Retrieval"
+
+#: templates/s1.html:107 templates/s2.html:108 templates/s3.html:108
+#: templates/s4.html:108 templates/s5.html:108
+msgid "第一页"
+msgstr "page 1"
+
+#: templates/s1.html:108 templates/s2.html:109 templates/s3.html:109
+#: templates/s4.html:109 templates/s5.html:109
+msgid "第二页"
+msgstr "Page 2"
+
+#: templates/s1.html:109 templates/s2.html:110 templates/s3.html:110
+#: templates/s4.html:110 templates/s5.html:110
+msgid "第三页"
+msgstr "Page 3"
+
+#: templates/s1.html:110 templates/s2.html:111 templates/s3.html:111
+#: templates/s4.html:111 templates/s5.html:111
+msgid "第四页"
+msgstr "Page 4"
+
+#: templates/s1.html:111 templates/s2.html:112 templates/s3.html:112
+#: templates/s4.html:112 templates/s5.html:112
+msgid "第五页"
+msgstr "Page 5"
+
+#: templates/s1.html:120 templates/s2.html:120 templates/s3.html:120
+#: templates/s4.html:120 templates/s5.html:120
+msgid "古文字字型预览"
+msgstr "Ancient character preview"
+
+#: templates/sp1.html:126 templates/sp2.html:126 templates/sp3.html:126
+#: templates/sp4.html:118 templates/sp5.html:118 templates/sp6.html:126
+msgid "关于“侯马盟书”的内容，一般分作五类：第一类是宗盟类，要求与盟人效忠盟主，一致讨伐敌对势力，是主盟人团结宗族内部的盟誓；第二类是委质类，与盟人表示同逃亡的旧主断绝关系，并制止其重返晋国；第三类叫作纳室类，与盟人表示盟誓后不再扩充奴隶、土地和财产；第四类是诅咒类，即对某些罪行加以诅咒。第五类是卜筮类，为盟誓卜牲时龟卜及筮占文辞的记载，不属于正式盟书。"
+msgstr ""
+"Regarding the content of the Houma Alliance Book, it is generally divided"
+" into five categories: the first category is the clan alliance, which "
+"requires loyalty to the lord and joint resistance against hostile forces,"
+" and is the alliance oath of the solidarity of the main alliance members;"
+" the second category is the defection category, which expresses the "
+"severing of ties with the former lord who escaped together, and prohibits"
+" their return to the Jin kingdom; the third category is the marriage "
+"alliance, which expresses the commitment not to expand slaves, land and "
+"property after the alliance oath is taken; the fourth category is the "
+"curse category, which curses certain crimes. The fifth category is the "
+"divination category, which is the record of the turtle divination and "
+"divination text during the alliance oath divination, and is not part of "
+"the formal alliance treaty."
+
+#: templates/sp1.html:127 templates/sp2.html:127 templates/sp3.html:127
+#: templates/sp4.html:119 templates/sp5.html:119 templates/sp6.html:127
+msgid "摹本共655张，拓片共263张"
+msgstr "There are a total of 655 copies of Imitation and 263 copies of rubbings."
+
+#: templates/sp1.html:131 templates/sp2.html:130 templates/sp3.html:130
+#: templates/sp4.html:130 templates/sp5.html:130 templates/sp6.html:130
+msgid "宗盟类"
+msgstr "Zong Meng"
+
+#: templates/sp1.html:132 templates/sp2.html:131 templates/sp3.html:131
+#: templates/sp4.html:131 templates/sp5.html:131 templates/sp6.html:131
+msgid "委质类"
+msgstr "Wei Zhi"
+
+#: templates/sp1.html:133 templates/sp2.html:132 templates/sp3.html:132
+#: templates/sp4.html:132 templates/sp5.html:132 templates/sp6.html:132
+msgid "纳室类"
+msgstr "Na Shi"
+
+#: templates/sp1.html:134 templates/sp2.html:133 templates/sp3.html:133
+#: templates/sp4.html:133 templates/sp5.html:133 templates/sp6.html:133
+msgid "诅咒类"
+msgstr "Zu Zhou"
+
+#: templates/sp1.html:135 templates/sp2.html:134 templates/sp3.html:134
+#: templates/sp4.html:134 templates/sp5.html:134 templates/sp6.html:134
+msgid "卜筮类"
+msgstr "Bo Shi"
+
+#: templates/sp1.html:136 templates/sp2.html:135 templates/sp3.html:135
+#: templates/sp4.html:135 templates/sp5.html:135 templates/sp6.html:135
+msgid "其他"
+msgstr "Else"
+
+#~ msgid "侯马盟书智能识别"
+#~ msgstr "Houma alliance book intelligent recognition"
+
+#~ msgid "关于我们"
+#~ msgstr "About Us"
+
+#~ msgid "古文字检测"
+#~ msgstr "Ancient script detection"
+
+#~ msgid "古文字图片查识别"
+#~ msgstr "Ancient character Image Recognition"
+

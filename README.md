@@ -101,12 +101,6 @@ python app.py
 
 The application will be available at `http://localhost:5000`
 
-### Using Tornado Server (Production)
-
-```bash
-python server.py
-# Server runs on port 9900
-```
 
 ---
 
@@ -260,12 +254,11 @@ Nanjing Institute of Technology
 Email: [your-email@example.com]
 
 **Supervisor**  
-**Prof. Huang** (黄老师)  
+**Prof. Huang**
 Nanjing Institute of Technology
 
 **Collaborators**  
 Z. Zhang, Y. Sun, Z. Xue, X. Shao  
-University of Oulu
 
 ---
 
@@ -292,15 +285,6 @@ University of Oulu
 
 The code implementation (excluding models and data) is available for **non-commercial academic use only**. For any other use cases, please contact the authors.
 
----
-
-## 📧 Contact
-
-For questions about:
-- **Research collaboration**: Contact Prof. Huang
-- **Dataset access**: Contact Xiaoyu Yuan
-- **Technical issues**: Open an issue on GitHub
-- **Commercial inquiries**: Contact Nanjing Institute of Technology
 
 ---
 
